@@ -33,7 +33,7 @@ function ContentForgotPass() {
     };
     const validateconformpass = () => {
         setIsPassConform(
-            /([a-z\|A-Z]+\d+[$#&@_%]+)|(\d+[a-z\|A-Z]+[$#&@_%]+)|([$#&@_%]+[a-z\|A-Z]+\d)+|(\d+[$#&@_%]+[a-z\|A-Z]+)/g.test(
+            /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%^&*]).+$/.test(
                 inputpass,
             ),
         );
@@ -73,7 +73,9 @@ function ContentForgotPass() {
                 if (res.data.errCode === 2) setWrongEmail(true);
                 else {
                     if (res.data.errCode === 1) setWrongPass(true);
-                    else console.log(res.data);
+                    else {
+                        alert('Mật khẩu đã đổi thành công giờ đây bạn hãy đăng nhập với mật khẩu mới');
+                    }
                 }
             });
     };
