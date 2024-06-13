@@ -1,0 +1,152 @@
+.wrapper {
+    width: 700px;
+    height: 550px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    .headerbox {
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px solid rgba(22, 24, 35, 0.5);
+        display: flex;
+        padding: 0 20px;
+        flex: 0 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .wrapperpost {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .container-avatar {
+                display: flex;
+                align-items: start;
+                .user-avatar {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 100%;
+                }
+            }
+            .container-post {
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                .container-name {
+                    .span-text {
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                }
+                .container-contentpost {
+                    .hashtab-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        a {
+                            color: rgb(43, 152, 224);
+                            font-size: 15px;
+                            font-weight: 400;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+        .container-off {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(84, 84, 84, 0.5);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .Officon {
+                color: #fff;
+                width: 25px;
+                height: 25px;
+            }
+            &:hover .Officon {
+                color: rgb(206, 206, 206);
+            }
+            &:hover {
+                background-color: rgba(215, 215, 215, 0.5);
+            }
+        }
+    }
+    .mainbox {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        flex: 1 1 auto;
+    }
+    .footerbox {
+        width: 100%;
+        height: 100px;
+        border-top: 1px solid rgba(22, 24, 35, 0.5);
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+        padding: 0 20px;
+        flex: 0 0 auto;
+        .wrapperofcomment {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            .loading {
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                font-weight: 600;
+                color: black;
+            }
+
+            .loading {
+                animation: spinner 0.8s linear infinite;
+            }
+            @keyframes spinner {
+                from {
+                    transform: translateY(-50%) rotate(0);
+                }
+                to {
+                    transform: translateY(-50%) rotate(360deg);
+                }
+            }
+            .inputcomment {
+                width: 100%;
+                height: 45px;
+                margin: auto 0;
+                background-color: rgba(22, 24, 35, 0.06);
+                border-radius: 8px;
+                padding: 0px 10px;
+                font-size: 15px;
+                caret-color: red;
+            }
+        }
+
+        .btnpush {
+            margin: auto 10px;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(22, 24, 35, 0.3);
+            cursor: pointer;
+            &.changebtn {
+                color: red;
+            }
+        }
+    }
+    &.blockdialog {
+        display: none;
+    }
+}

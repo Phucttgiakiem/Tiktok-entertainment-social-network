@@ -1,0 +1,56 @@
+.wrapper {
+    width: 90%;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        margin: 5px 10px;
+        border-radius: 50%;
+    }
+
+    .main-container {
+        margin: 5px 10px 0;
+        flex-grow: 1;
+
+        .user-title {
+            font-size: 20px;
+        }
+
+        .comment {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .timecreate {
+            color: rgba(22, 24, 35, 0.5);
+            font-weight: 200;
+        }
+    }
+
+    .dot-container {
+        display: flex;
+        flex-direction: column;
+
+        .dot-icon {
+            color: rgba(22, 24, 35, 0.5);
+            font-weight: 300;
+            margin-top: 1px;
+            cursor: pointer;
+            opacity: 0; /* handle icon default */
+            transition: opacity 0.3s; /* effect change when hover */
+
+            &.visible {
+                opacity: 1; /* show icon when hover */
+            }
+        }
+    }
+    .delete-button {
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+}

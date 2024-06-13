@@ -1,0 +1,25 @@
+.content-one {
+    width: 70%;
+    margin: 0 auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    .btn-login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin: 10px auto 10px;
+        font: 13px Tahoma, sans-serif;
+        outline: none;
+        border: 1px solid rgb(205, 205, 205);
+        background-color: transparent;
+        &:hover {
+            background-color: rgb(232, 232, 232);
+        }
+    }
+    .icon {
+        margin-left: 0;
+    }
+}
